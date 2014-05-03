@@ -8,6 +8,7 @@ class LaravelDolarBlueTesting extends PHPUnit_Framework_TestCase
 
     public function setUp()
     {
+        VCR::configure()->setCassettePath('tests/fixtures');
         $this->service = new LaravelDolarBlue;
     }
 
@@ -37,7 +38,7 @@ class LaravelDolarBlueTesting extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException Exception
-     * @vcr lanacion_404
+     * @vcr lanacion_404.yml
      */
     public function testServerNotResponding()
     {
@@ -45,7 +46,7 @@ class LaravelDolarBlueTesting extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @vcr lanacion
+     * @vcr lanacion.yml
      */
     public function testCallMagicMethodLaNacion()
     {
@@ -54,7 +55,7 @@ class LaravelDolarBlueTesting extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @vcr lanacion
+     * @vcr lanacion.yml
      */
     public function testLaNacion()
     {
@@ -63,7 +64,7 @@ class LaravelDolarBlueTesting extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @vcr bluelytics
+     * @vcr bluelytics.yml
      */
     public function testBlueLytics()
     {
@@ -72,7 +73,7 @@ class LaravelDolarBlueTesting extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @vcr dolarblue
+     * @vcr dolarblue.yml
      */
     public function testDolarBlue()
     {

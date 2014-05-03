@@ -1,0 +1,29 @@
+
+-
+    request:
+        method: GET
+        url: 'http://contenidos.lanacion.com.ar/json/dolar'
+        headers:
+            Host: contenidos.lanacion.com.ar
+            User-Agent: 'Guzzle/3.9.0 curl/7.21.4 PHP/5.5.11'
+            Content-Length: '0'
+    response:
+        status: 200
+        headers:
+            Age: '279'
+            Cache-Control: 'public, must-revalidate, max-age=300'
+            Content-Type: application/json
+            Date: 'Sat, 03 May 2014 01:58:13 GMT'
+            Last-Modified: 'Sat, 03 May 2014 01:51:57 GMT'
+            Response-Flush: No
+            Vary: Accept-Encoding
+            Via: '1.1 varnish'
+            X-Cache: 'HIT 3'
+            X-EPV: va2
+            X-Location: AWS
+            X-ORI: w10v
+            X-Powered-By: ASP.NET
+            X-Varnish: '298271303 298254876'
+            transfer-encoding: chunked
+            Connection: keep-alive
+        body: 'dolarjsonpCallback({"Date":"2014-04-30T00:00:00","CasaCambioVentaValue":"8,03","BolsaCompraValue":"9,97","BolsaVentaValue":"9,97","InformalVentaValue":"10,5","CasaCambioCompraValue":"7,96","InformalCompraValue":"10,3"});'
