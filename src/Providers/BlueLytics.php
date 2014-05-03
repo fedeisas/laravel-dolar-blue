@@ -6,13 +6,13 @@ class BlueLytics extends Provider implements ProviderInterface
      * Provider's base URL
      * @var string
      */
-    protected $baseURL = 'http://bluelytics.com.ar/';
+    protected $baseUrl = 'http://bluelytics.com.ar/';
 
     /**
      * Provider's endpoint URL
      * @var string
      */
-    protected $endpointURL = 'json/last_price';
+    protected $endpointUrl = 'json/last_price';
 
     /**
      * Parse Provider's Response

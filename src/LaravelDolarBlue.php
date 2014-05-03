@@ -4,7 +4,6 @@ use \InvalidArgumentException;
 
 class LaravelDolarBlue
 {
-
     /**
      * Returns provider's parsed result
      * @param string $provider Provider's name. Default LaNacion

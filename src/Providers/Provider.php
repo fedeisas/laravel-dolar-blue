@@ -16,7 +16,8 @@ abstract class Provider
      */
     public function __construct()
     {
-        $this->client = new Client($this->baseURL);
+        $this->client = new Client();
+        $this->client->setBaseUrl($this->baseUrl);
     }
 
     /**
@@ -25,7 +26,7 @@ abstract class Provider
      */
     public function get()
     {
-        $response = $this->fetch($this->endpointURL);
+        $response = $this->fetch($this->endpointUrl);
         return $this->parse($response);
     }
 

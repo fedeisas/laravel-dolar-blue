@@ -6,18 +6,18 @@ class DolarBlue extends Provider implements ProviderInterface
      * Provider's base URL
      * @var string
      */
-    protected $baseURL = 'https://docs.google.com/spreadsheet/pub';
+    protected $baseUrl = 'https://docs.google.com/spreadsheet/pub';
 
     /**
      * Provider's endpoint URL
      * @var string
      */
-    protected $endpointURL;
+    protected $endpointUrl;
 
     public function __construct()
     {
         parent::__construct();
-        $this->endpointURL = $this->baseURL .
+        $this->endpointUrl = $this->baseUrl .
                             '?hl=en_US' .
                             '&key=0AtVv0u3p3Ex7dDZaVno5Uno3bWJ0UERpa0hDeDB4eHc' .
                             '&output=csv' .

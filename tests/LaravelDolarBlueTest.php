@@ -6,9 +6,15 @@ use VCR\VCR;
 class LaravelDolarBlueTesting extends PHPUnit_Framework_TestCase
 {
 
+    /**
+     * @var Fedeisas\LaravelDolarBlue\LaravelDolarBlue
+     */
+    protected $service;
+
     public function setUp()
     {
-        VCR::configure()->setCassettePath('tests/fixtures');
+        // Fix VCR path for Travis
+        VCR::configure()->setCassettePath(__DIR__ . '/fixtures');
         $this->service = new LaravelDolarBlue;
     }
 

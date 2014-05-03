@@ -6,13 +6,13 @@ class LaNacion extends Provider implements ProviderInterface
      * Provider's base URL
      * @var string
      */
-    protected $baseURL = 'http://contenidos.lanacion.com.ar/';
+    protected $baseUrl = 'http://contenidos.lanacion.com.ar/';
 
     /**
      * Provider's endpoint URL
      * @var string
      */
-    protected $endpointURL = 'json/dolar';
+    protected $endpointUrl = 'json/dolar';
 
     /**
      * Parse Provider's Response
