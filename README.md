@@ -68,7 +68,7 @@ $result = $service->get('DolarBlue'); // or $service->DolarBlue();
 // )
 ```
 
-Or you an use the facade:
+Or you can use the facade:
 ```php
 $result = DolarBlue::get('LaNacion');
 
