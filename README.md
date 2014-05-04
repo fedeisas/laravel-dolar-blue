@@ -58,10 +58,8 @@ Currenly it only supports 3 providers (more to come):
 + BlueLytics
 
 ```php
-use Fedeisas\LaravelDolarBlue\LaravelDolarBlue;
-
-$service = new LaravelDolarBlue;
-$result = $service->get('DolarBlue');
+$service = App::make('Fedeisas\LaravelDolarBlue\LaravelDolarBlue');
+$result = $service->get('DolarBlue'); // or $service->DolarBlue();
 // returns
 // array(
 //   'buy' => '10.15',
@@ -74,7 +72,7 @@ Or you an use the facade:
 ```php
 $result = DolarBlue::get('LaNacion');
 
-// or using some __call magic
+// and using some __call magic
 $result = DolarBlue::LaNacion();
 $result = DolarBlue::DolarBlue();
 $result = DolarBlue::BlueLytics();
