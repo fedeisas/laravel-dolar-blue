@@ -2,6 +2,7 @@
     "name": "fedeisas/laravel-dolar-blue",
     "description": "Laravel package to fetch latest USD conversion rate on Argentina's black market",
     "license": "MIT",
+    "version": "1.0",
     "authors": [
         {
             "name": "Fede Isas",
