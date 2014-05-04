@@ -16,12 +16,11 @@ class DolarBlue extends Provider implements ProviderInterface
 
     public function __construct()
     {
-        $this->endpointUrl = $this->baseUrl .
-                            '?hl=en_US' .
-                            '&key=0AtVv0u3p3Ex7dDZaVno5Uno3bWJ0UERpa0hDeDB4eHc' .
-                            '&output=csv' .
-                            '&single=true' .
-                            '&gid=0';
+        $this->endpointUrl = '?hl=en_US' .
+                             '&key=0AtVv0u3p3Ex7dDZaVno5Uno3bWJ0UERpa0hDeDB4eHc' .
+                             '&output=csv' .
+                             '&single=true' .
+                             '&gid=0';
     }
 
     /**
