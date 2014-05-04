@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Server: nginx/1.2.1
+Date: Sun, 04 May 2014 00:31:13 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+Content-Encoding: gzip
+
+[{"date": "2014-05-03T21:00:03.138662-03:00", "source": "dolarblue.net", "value_avg": 10.35, "value_sell": 10.50, "value_buy": 10.50}, {"date": "2014-05-03T21:00:05.897357-03:00", "source": "ambito_financiero", "value_avg": 10.5, "value_sell": 10.50, "value_buy": 10.50}, {"date": "2014-05-03T20:00:09.802268-03:00", "source": "la_nacion", "value_avg": 10.4, "value_sell": 10.50, "value_buy": 10.50}, {"date": "2014-05-03T21:00:11.210069-03:00", "source": "oficial", "value_avg": 7.985, "value_sell": 10.50, "value_buy": 10.50}]

@@ -19,7 +19,7 @@ class LaNacion extends Provider implements ProviderInterface
      * @param GuzzleHttp\Message\Response $response
      * @return array $result
      */
-    protected function parse($response)
+    public function parse($response)
     {
         $body = (string) $response->getBody();
         $json = json_decode(substr($body, 19, strlen($body) - 19 - 2));

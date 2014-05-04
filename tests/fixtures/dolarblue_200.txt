@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+status: 200 OK
+version: HTTP/1.1
+alternate-protocol: 443:quic
+cache-control: private, max-age=0
+content-disposition: attachment; filename="Precio Dólar Blue.csv"
+content-encoding: gzip
+content-length: 120
+content-type: text/csv
+date: Sun, 04 May 2014 00:32:28 GMT
+expires: Sun, 04 May 2014 00:32:28 GMT
+server: GSE
+x-content-type-options: nosniff
+x-robots-tag: noindex, nofollow, nosnippet
+x-xss-protection: 1; mode=block
+
+DÓLAR,COMPRA,VENTA,DIFERENCIA,AYER
+"
+BLUE
+
+","10,50","10,50","-0,05","10,60"
+Más información,dolarblue.net,,,

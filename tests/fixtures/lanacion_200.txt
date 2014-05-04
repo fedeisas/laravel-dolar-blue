@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Age: 87
+Cache-Control: public, must-revalidate, max-age=300
+Content-Type: application/json
+Date: Sat, 03 May 2014 16:27:15 GMT
+Last-Modified: Sat, 03 May 2014 16:26:11 GMT
+Response-Flush: No
+Vary: Accept-Encoding
+Via: 1.1 varnish
+X-Cache: HIT 4
+X-EPV: va2
+X-Location: AWS
+X-ORI: w10v
+X-Powered-By: ASP.NET
+X-Varnish: 301429513 301422437
+transfer-encoding: chunked
+Connection: keep-alive
+
+dolarjsonpCallback({"Date":"2014-04-30T00:00:00","CasaCambioVentaValue":"8,03","BolsaCompraValue":"9,97","BolsaVentaValue":"9,97","InformalVentaValue":"10,5","CasaCambioCompraValue":"7,96","InformalCompraValue":"10,5"});

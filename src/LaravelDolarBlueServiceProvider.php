@@ -29,7 +29,10 @@ class LaravelDolarBlueServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Do nothing
+        $this->app['fedeisas.laravel-dolar-blue'] = $this->app->share(function ($app) {
+            $client = new Guzzle\Http\Client;
+            return new LaravelDolarBlue($client);
+        });
     }
 
     /**

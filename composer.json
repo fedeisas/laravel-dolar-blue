@@ -20,9 +20,7 @@
         "jakub-onderka/php-parallel-lint": "dev-master",
         "jakub-onderka/php-console-highlighter": "dev-master",
         "pdepend/pdepend" : "1.1.1",
-        "phpmd/phpmd": "1.5.*",
-        "php-vcr/php-vcr": "dev-master",
-        "php-vcr/phpunit-testlistener-vcr": "dev-master"
+        "phpmd/phpmd": "1.5.*"
     },
     "autoload": {
         "psr-4": {

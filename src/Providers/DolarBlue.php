@@ -16,7 +16,6 @@ class DolarBlue extends Provider implements ProviderInterface
 
     public function __construct()
     {
-        parent::__construct();
         $this->endpointUrl = $this->baseUrl .
                             '?hl=en_US' .
                             '&key=0AtVv0u3p3Ex7dDZaVno5Uno3bWJ0UERpa0hDeDB4eHc' .
@@ -30,7 +29,7 @@ class DolarBlue extends Provider implements ProviderInterface
      * @param GuzzleHttp\Message\Response $response
      * @return array $result
      */
-    protected function parse($body)
+    public function parse($body)
     {
         $body = (string) $body->getBody();
         $csv = str_getcsv($body);

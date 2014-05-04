@@ -1,7 +1,9 @@
 <?php
 
 use Fedeisas\LaravelDolarBlue\LaravelDolarBlue;
-use VCR\VCR;
+use GuzzleHttp\Client;
+use GuzzleHttp\Subscriber\Mock;
+use GuzzleHttp\Message\Response;
 
 class LaravelDolarBlueTesting extends PHPUnit_Framework_TestCase
 {
@@ -11,11 +13,28 @@ class LaravelDolarBlueTesting extends PHPUnit_Framework_TestCase
      */
     protected $service;
 
+    /**
+     * @var GuzzleHttp\Client
+     */
+    protected $client;
+
     public function setUp()
     {
-        // Fix VCR path for Travis
-        VCR::configure()->setCassettePath(__DIR__ . '/fixtures');
-        $this->service = new LaravelDolarBlue;
+        $this->client = new Client;
+        $this->service = new LaravelDolarBlue($this->client);
+    }
+
+    private function mockGuzzle($response)
+    {
+        $this->client = new Client;
+
+        $mock = new Mock(array(
+            file_get_contents(__DIR__ . '/fixtures/' . $response)
+        ));
+
+        $this->client->getEmitter()->attach($mock);
+
+        $this->service = new LaravelDolarBlue($this->client);
     }
 
     /**
@@ -32,6 +51,8 @@ class LaravelDolarBlueTesting extends PHPUnit_Framework_TestCase
         $this->assertTrue($result['sell'] > 0);
         $this->assertTrue(is_numeric($result['buy']));
         $this->assertTrue(is_numeric($result['sell']));
+        $this->assertTrue($result['buy'] == 10.50);
+        $this->assertTrue($result['sell'] == 10.50);
     }
 
     /**
@@ -44,45 +65,46 @@ class LaravelDolarBlueTesting extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException Exception
-     * @vcr lanacion_404.yml
      */
     public function testServerNotResponding()
     {
+        $this->mockGuzzle('lanacion_404.txt');
         $result = $this->service->get('LaNacion');
     }
 
     /**
-     * @vcr lanacion.yml
+     * @expectedException Exception
      */
+    public function testMalformedData()
+    {
+        $this->mockGuzzle('lanacion_malformed.txt');
+        $result = $this->service->get('LaNacion');
+    }
+
     public function testCallMagicMethodLaNacion()
     {
+        $this->mockGuzzle('lanacion_200.txt');
         $result = $this->service->LaNacion();
         $this->resultAssertions($result);
     }
 
-    /**
-     * @vcr lanacion.yml
-     */
     public function testLaNacion()
     {
+        $this->mockGuzzle('lanacion_200.txt');
         $result = $this->service->get('LaNacion');
         $this->resultAssertions($result);
     }
 
-    /**
-     * @vcr bluelytics.yml
-     */
     public function testBlueLytics()
     {
+        $this->mockGuzzle('bluelytics_200.txt');
         $result = $this->service->get('BlueLytics');
         $this->resultAssertions($result);
     }
 
-    /**
-     * @vcr dolarblue.yml
-     */
     public function testDolarBlue()
     {
+        $this->mockGuzzle('dolarblue_200.txt');
         $result = $this->service->get('DolarBlue');
         $this->resultAssertions($result);
     }

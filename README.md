@@ -12,6 +12,10 @@ Laravel Dolar Blue
 ## Why?
 Because Argentina has a black market for currency exchange. And this makes it easy to retrieve the current USD conversion rate from different sources. And also because I needed something small to talk about Package Development and testing on [this meetup](http://www.meetup.com/Laravel-Buenos-Aires/events/174574162/).
 
+## Requirements
+- Laravel 4
+- PHP >= 5.4
+
 ## Installation
 Begin by installing this package through Composer. Edit your project's `composer.json` file to require `fedeisas/laravel-dolar-blue.
 
