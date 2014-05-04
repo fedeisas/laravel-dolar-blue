@@ -11,6 +11,6 @@ class LaravelDolarBlue extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'FedeIsas\LaravelDolarBlue\LaravelDolarBlue';
+        return 'Fedeisas\LaravelDolarBlue\LaravelDolarBlue';
     }
 }
