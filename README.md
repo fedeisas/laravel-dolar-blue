@@ -3,7 +3,6 @@ Laravel Dolar Blue
 
 [![Travis Badge](https://secure.travis-ci.org/fedeisas/laravel-dolar-blue.png)](http://travis-ci.org/fedeisas/laravel-dolar-blue)
 [![Coverage Status](https://coveralls.io/repos/fedeisas/laravel-dolar-blue/badge.png)](https://coveralls.io/r/fedeisas/laravel-dolar-blue)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/fedeisas/laravel-dolar-blue/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 [![Latest Stable Version](https://poser.pugx.org/fedeisas/laravel-dolar-blue/v/stable.png)](https://packagist.org/packages/fedeisas/laravel-dolar-blue)
 [![Latest Unstable Version](https://poser.pugx.org/fedeisas/laravel-dolar-blue/v/unstable.png)](https://packagist.org/packages/fedeisas/laravel-dolar-blue)
 [![Total Downloads](https://poser.pugx.org/fedeisas/laravel-dolar-blue/downloads.png)](https://packagist.org/packages/fedeisas/laravel-dolar-blue)
