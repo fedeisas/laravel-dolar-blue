@@ -6,7 +6,7 @@ class BlueLytics extends Provider implements ProviderInterface
      * Provider's base URL
      * @var string
      */
-    protected $baseUrl = 'http://bluelytics.com.ar/';
+    protected $baseUrl = 'http://api.bluelytics.com.ar/';
 
     /**
      * Provider's endpoint URL
